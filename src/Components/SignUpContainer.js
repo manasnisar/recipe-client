@@ -69,10 +69,12 @@ const SignUp = ({message , registerUser}) => {
         password
       }
       registerUser(data)
+    }else{
+      alert("Password should be atleast 5 characters")
     }
   }
 
-  const isFormValid = (name , email , password) => (name && email && password)
+  const isFormValid = (name , email , password) => (name && email && password.length > 4)
 
 
 
